@@ -15,8 +15,9 @@ html, body {
     scroll-behavior: smooth;
 }
 
-a:visited {
+a, a:visited {
     text-decoration: none;
+    color: var(--color-text-alternate);
 }
 
 header {
@@ -42,34 +43,35 @@ footer {
     font-weight: bold;
 }
 
-#nav-menu a {
-    margin: 0 6px 0 6px;
-    color: var(--color-text-alternate);
-    text-decoration: none;
-}
-
 .viewport-page {
     min-height: 100vh;
-    padding-top: 65px;
+    padding: 65px 0 0 180px;
 }
 
-.title {
-    width: 250px;
-    line-height: 60px;
-    background-color: var(--color-highlight);
-    transform: skew(-25deg);
-    margin-left: -50px;
-    border-radius: 0 10px 10px 0;
+#menu {
+    position: fixed;
+    top: 100px;
+    left: 0;    
 }
 
-.title > h1 {
-    transform: skew(25deg);
-    padding-left: 65px;
-}
-
-h1 {
+.menu-item {
+    display: block;
+    text-align: right;
+    padding-right: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: lighter;
-    font-size: 24pt;
+    font-size: 20pt;
     color: var(--color-text-alternate);
+    width: 180px;
+    line-height: 50px;
+    background-color: var(--color-highlight);
+    border-radius: 0 10px 10px 0;
+    margin: 3px 0 3px -50px;
+
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: skewX(0);
+    margin: 3px 0 3px -20px;
 }
