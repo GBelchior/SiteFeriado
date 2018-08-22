@@ -5,6 +5,7 @@
 
 :root {
     --color-highlight: #343438;
+    --color-text-default: #333;
     --color-text-alternate: #ddd;
 }
 
@@ -15,10 +16,6 @@ html, body {
     scroll-behavior: smooth;
 }
 
-a, a:visited {
-    text-decoration: none;
-    color: var(--color-text-alternate);
-}
 
 header {
     top: 0;
@@ -35,17 +32,26 @@ header, footer {
     z-index: 999999;
 }
 
+a, a:visited {
+    text-decoration: none;
+}
+
 footer {
     bottom: 0;
 }
 
 .site-brand {
     font-weight: bold;
+    color: var(--color-text-alternate);
 }
 
 .viewport-page {
     min-height: 100vh;
     padding: 65px 0 0 180px;
+}
+
+.color-default {
+    color: var(--color-text-default);
 }
 
 #menu {
@@ -74,4 +80,11 @@ footer {
 .menu-item:hover {
     transform: skewX(0);
     margin: 3px 0 3px -20px;
+}
+
+#aboutPage {
+    background: 
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)) no-repeat fixed center,
+        url('../resources/alan-turing.jpg') no-repeat fixed center;
+    background-size: cover;
 }
