@@ -26,7 +26,14 @@ header, footer {
     z-index: 999999;
 }
 
-
+.reference {
+    width: 49%;
+    display: block;
+    margin: 2px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+}
 
 header {
     position: absolute;
