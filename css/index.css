@@ -16,13 +16,7 @@ html, body {
     scroll-behavior: smooth;
 }
 
-
-header {
-    top: 0;
-}
-
 header, footer {
-    position: fixed;
     left: 0;
     right: 0;
     padding: 0 6px 0 6px;
@@ -32,17 +26,30 @@ header, footer {
     z-index: 999999;
 }
 
+
+
+header {
+    position: absolute;
+    top: 0;
+    background: 
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) no-repeat fixed center;
+}
+
+
 a, a:visited {
     text-decoration: none;
 }
 
 footer {
     bottom: 0;
+    height: 10vh;
 }
 
 .site-brand {
     font-weight: bold;
     color: var(--color-text-alternate);
+    font-size: 2rem;
+    font-family: monospace;
 }
 
 .viewport-page {
@@ -84,7 +91,66 @@ footer {
 
 #aboutPage {
     background: 
-        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)) no-repeat fixed center,
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) no-repeat fixed center,
         url('../resources/alan-turing.jpg') no-repeat fixed center;
     background-size: cover;
+
+    text-shadow: 2px 2px 2px black;
+    color: #dedede;
+}
+
+#homePage {
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) no-repeat fixed center,
+        url('../resources/alan-turing.jpg') no-repeat fixed center;
+    background-size: cover;
+
+    
+    text-shadow: 2px 2px 2px black;
+    color: #dedede;
+    font-size: 20px;
+}
+
+#homePage p {
+    position: absolute;
+}
+
+#quote2 {
+    bottom: 50px;
+    right: 30px;
+}
+
+#quote1 {
+    top: 70px;
+    right: 30px;
+}
+
+#siteName {
+    bottom: 25vh;
+    width: 98vw;
+    left: 0;
+    font-size: 120px;
+    font-family: monospace;
+    text-align: center;
+}
+
+#siteDescription {
+    bottom: 30vh;
+    width: 98vw;
+    left: 0;
+    font-size: 30px;
+    font-family: monospace;
+    text-align: center;
+}
+
+
+#aboutPage p {
+    font-size: 1.5vw;
+    line-height: 30px;
+    margin: 50px;
+}
+
+#contactPage {
+    padding: 0 0 0 180px;
+    height: 90vh;
 }
